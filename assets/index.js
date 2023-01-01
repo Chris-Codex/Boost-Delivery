@@ -1,1 +1,8 @@
 export { default as UserIcon } from "../assets/usericon.webp"
+export { default as Meal2 } from "../assets/meal2.jpeg"
+export { default as Meal3 } from "../assets/meal3.jpeg"
+export { default as Meal4 } from "../assets/meal4.jpeg"
+export { default as Meal5 } from "../assets/meal5.jpeg"
+export { default as Meal6 } from "../assets/meal6.png"
+export { default as Meal7 } from "../assets/meal7.png"
+export { default as Meal8 } from "../assets/meal8.jpeg"
