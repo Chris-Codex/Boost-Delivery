@@ -25,8 +25,8 @@ const RestaurantScreen = () => {
 
 
     return (
-        <ScrollView>
-            <View className="relative">
+        <ScrollView className="relative mb-8" showsVerticalScrollIndicator={false}>
+            <View>
                 <Image source={{ uri: urlFor(imgUrl).url() }} className="w-full h-[200px]" />
                 <View className="absolute flex-row justify-between w-full px-4 mt-10">
                     <TouchableOpacity onPress={() => navigation.navigate("Home")} className="w-[35px] bg-white h-[35px]bg-white rounded-lg items-center justify-center shadow-lg">
@@ -61,12 +61,10 @@ const RestaurantScreen = () => {
                     </TouchableOpacity>
                 </View>
 
-                <Text className="font-bold text-[20px] px-4 mt-4">Menu</Text>
+                <Text className="font-bold text-[18px] px-4 mt-4">Menu</Text>
 
                 <View className="mt-4">
-
                     {dishes.map((dish) => {
-                        console.log("DISHES", dish.short_description)
                         return (
                             <DishRow
                                 key={dish._id}
@@ -80,6 +78,18 @@ const RestaurantScreen = () => {
                     })}
                 </View>
             </View>
+
+            {/* <View className="absolute top-[740px] bottom-95 px-5 w-full h-[100px]">
+                <View className="flex-row bg-[#39b5d4] w-full h-[60px] justify-between px-4 items-center rounded-lg shadow-lg">
+                    <View className="bg-[#1b6578] w-[30px] h-[30px] items-center justify-center">
+                        <Text className="text-[#fff] font-bold">3</Text>
+                    </View>
+                    <TouchableOpacity>
+                        <Text className="text-[#fff] font-bold">View Basket</Text>
+                    </TouchableOpacity>
+                    <Text className="text-[#fff] font-bold">$34</Text>
+                </View>
+            </View> */}
         </ScrollView>
     )
 }
