@@ -83,6 +83,8 @@ const HomeScreen = () => {
                 </View>
             </View>
 
+
+
             <ScrollView
                 showsVerticalScrollIndicator={false}
                 className="w-full mb-[120px]"
@@ -98,7 +100,6 @@ const HomeScreen = () => {
 
                 {/* Featured Row */}
                 {featuredCategory?.map((category) => {
-                    const { name, address } = category
 
                     return (
                         <FeaturedRow

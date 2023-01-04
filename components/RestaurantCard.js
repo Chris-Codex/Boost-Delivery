@@ -3,13 +3,18 @@ import React from 'react'
 import { Entypo } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { urlFor } from '../sanity';
+import { useNavigation } from '@react-navigation/native';
 
 const RestaurantCard = ({
     id, imgUrl, title, rating, genre, address, short_Description, dishes, long, lat
 }) => {
+    const navigation = useNavigation()
+
     return (
         <View className="flex-row mt-4 mr-2">
-            <TouchableOpacity className="w-[180px] h-[182px] bg-white" key={id}>
+            <TouchableOpacity onPress={() => navigation.navigate("Restaurant", {
+                id, imgUrl, title, rating, genre, address, short_Description, dishes, long, lat
+            })} className="w-[180px] h-[182px] bg-white" key={id}>
                 <Image source={{
                     uri: urlFor(imgUrl).url()
                 }} alt="meal2" className="w-[180px] h-[110px]" />
