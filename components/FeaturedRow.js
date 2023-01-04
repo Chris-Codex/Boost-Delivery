@@ -2,7 +2,6 @@ import { View, Text, ScrollView } from "react-native";
 import React, { useState, useEffect } from "react";
 import { AntDesign } from "@expo/vector-icons";
 import RestaurantCard from "./RestaurantCard";
-import { Mc1 } from "../assets";
 import Sanityclient from "../sanity";
 
 const FeaturedRow = ({ id, title, description }) => {
