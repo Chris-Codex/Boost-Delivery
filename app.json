@@ -4,10 +4,10 @@
     "slug": "order-foodie",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/mc1.jpeg",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/mc1.jpeg",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -22,12 +22,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/mc1.jpeg",
+        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./assets/mc1.jpeg"
+      "favicon": "./assets/favicon.png"
     }
   }
 }
