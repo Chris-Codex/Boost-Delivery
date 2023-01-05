@@ -47,8 +47,8 @@ const HomeScreen = () => {
     return (
         <SafeAreaView className="mt-6">
             {/* HEADER */}
-            <View className="relative bg-white h-[140px] mt-[-30px]">
-                <View className="flex-row items-center justify-between mx-4 mt-8">
+            <View className="relative bg-white h-[180px] mt-[-70px]">
+                <View className="flex-row items-center justify-between mx-4 mt-16">
                     <View className="flex-row space-x-2">
                         <View>
                             <Image
@@ -71,7 +71,7 @@ const HomeScreen = () => {
                 </View>
 
                 {/* SEARCH FORM */}
-                <View className="absolute flex-row justify-between mx-4 mt-2 items-center top-[74px] space-x-2">
+                <View className="absolute flex-row justify-between mx-6 mt-2 items-center top-[110px] space-x-2">
                     <View className="w-[315px] h-[40px] bg-[#e3e2e2] justify-center">
                         <TextInput placeholder="Restaurants and cuisine" className="mx-4" />
                     </View>

@@ -59,7 +59,7 @@ const RestaurantScreen = () => {
                 lat,
             })
         );
-    }, []);
+    }, [dispatch]);
 
     return (
         <>
