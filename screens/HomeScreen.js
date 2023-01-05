@@ -85,32 +85,37 @@ const HomeScreen = () => {
 
 
 
-            <ScrollView
-                showsVerticalScrollIndicator={false}
-                className="w-full mb-[120px]"
-            >
+            {featuredCategory.length > 0 ? (
                 <ScrollView
-                    horizontal={true}
-                    showsHorizontalScrollIndicator={false}
-                    className=""
+                    showsVerticalScrollIndicator={false}
+                    className="w-full mb-[120px]"
                 >
-                    {/* CATEGORIES */}
-                    <Categories />
+                    <ScrollView
+                        horizontal={true}
+                        showsHorizontalScrollIndicator={false}
+                        className=""
+                    >
+                        {/* CATEGORIES */}
+                        <Categories />
+                    </ScrollView>
+
+                    {/* Featured Row */}
+                    {featuredCategory?.map((category) => {
+                        return (
+                            <FeaturedRow
+                                key={category._id}
+                                id={category._id}
+                                title={category.featured}
+                                description={category.short_description}
+                            />
+                        );
+                    })}
                 </ScrollView>
-
-                {/* Featured Row */}
-                {featuredCategory?.map((category) => {
-
-                    return (
-                        <FeaturedRow
-                            key={category._id}
-                            id={category._id}
-                            title={category.featured}
-                            description={category.short_description}
-                        />
-                    );
-                })}
-            </ScrollView>
+            ) : (
+                <View>
+                    <Text>No Data Available</Text>
+                </View>
+            )}
         </SafeAreaView>
     );
 };

@@ -23,7 +23,8 @@ const DishRow = ({ id, name, short_description, price, image }) => {
     }
 
     const handleRemoveItemsFromBasket = () => {
-
+        if (!items.length > 0) return
+        dispatch(removeFromBasket({ id }))
     }
 
 
@@ -42,7 +43,7 @@ const DishRow = ({ id, name, short_description, price, image }) => {
 
             {isPressed && (
                 <View className="px-5 mt-[-62px] flex-row items-center space-x-1 mb-2">
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={handleRemoveItemsFromBasket}>
                         <Entypo name="circle-with-minus" size={28} color="#39b5d4" />
                     </TouchableOpacity>
                     <Text className="text-[#a2a0a0]">{items.length}</Text>
