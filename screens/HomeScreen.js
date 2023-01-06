@@ -86,15 +86,8 @@ const HomeScreen = () => {
 
 
             {featuredCategory.length > 0 ? (
-                <ScrollView
-                    showsVerticalScrollIndicator={false}
-                    className="w-full mb-[120px]"
-                >
-                    <ScrollView
-                        horizontal={true}
-                        showsHorizontalScrollIndicator={false}
-                        className=""
-                    >
+                <ScrollView showsVerticalScrollIndicator={false} className="w-full mb-[120px]">
+                    <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
                         {/* CATEGORIES */}
                         <Categories />
                     </ScrollView>
